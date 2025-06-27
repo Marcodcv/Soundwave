@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regístrate - Soundwave</title>
+    <link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+        
+        .main-container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .welcome-section {
+            flex: 1;
+            background-image: linear-gradient(rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.5)), url(../assets/img/sig.jpg);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .signup-section {
+            flex: 1;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .signup-form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+        
+        .welcome-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .form-control {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+        
+        .btn-signup {
+            background-color: #D4BE7F;
+            border: none;
+            padding: 10px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn-signup:hover {
+            background-color: #c5af6e;
+        }
+        
+        .signup-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .form-check {
+            margin-bottom: 15px;
+        }
+        
+        .main-container .welcome-section .logo {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+        
+        .main-container .welcome-section .logo img {
+            max-height: 50px;
+            width: auto;
+        }
+        /* Media Queries para Responsive Design */
+        
+        /* Tablets en orientación portrait y dispositivos medianos */
+        @media (max-width: 992px) {
+            .welcome-title {
+                font-size: 3rem;
+            }
+            
+            .welcome-text {
+                font-size: 1.1rem;
+            }
+            
+            .signup-form {
+                max-width: 450px;
+            }
+        }
+        
+        /* Tablets pequeñas y móviles grandes en landscape */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .welcome-section {
+                min-height: 35vh;
+                padding: 30px 20px;
+                justify-content: center;
+            }
+            
+            .signup-section {
+                min-height: 65vh;
+                padding: 30px 20px;
+            }
+            
+            .welcome-title {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            
+            .welcome-text {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            .back-link {
+                margin-top: 20px;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                padding-top: 10px;
+            }
+            
+            .signup-form {
+                max-width: 100%;
+                padding: 15px;
+            }
+            
+            .signup-title {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+            
+            .form-group {
+                margin-bottom: 18px;
+            }
+        }
+        
+        /* Móviles en portrait */
+        @media (max-width: 576px) {
+            .welcome-section {
+                min-height: 30vh;
+                padding: 20px 15px;
+            }
+            
+            .signup-section {
+                min-height: 70vh;
+                padding: 20px 15px;
+            }
+            
+            .welcome-title {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            
+            .welcome-text {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            
+            .back-link {
+                font-size: 0.85rem;
+                margin-top: 15px;
+            }
+            
+            .signup-title {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+            
+            .form-control {
+                padding: 14px 12px;
+                font-size: 16px; /* Evita zoom en iOS */
+                margin-bottom: 12px;
+            }
+            
+            .btn-signup {
+                padding: 14px;
+                font-size: 1rem;
+                margin-top: 20px;
+            }
+            
+            .logo img {
+                max-height: 40px;
+            }
+            
+            .login-link {
+                font-size: 0.9rem;
+                margin-top: 25px;
+            }
+            
+            .form-check-label {
+                font-size: 0.85rem;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+            
+            .password-strength {
+                font-size: 0.75rem;
+                margin-top: -8px;
+            }
+        }
+        
+        /* Móviles muy pequeños */
+        @media (max-width: 360px) {
+            .welcome-section {
+                padding: 15px 10px;
+                min-height: 25vh;
+            }
+            
+            .signup-section {
+                padding: 15px 10px;
+                min-height: 75vh;
+            }
+            
+            .welcome-title {
+                font-size: 1.8rem;
+            }
+            
+            .welcome-text {
+                font-size: 0.85rem;
+            }
+            
+            .signup-form {
+                padding: 5px;
+            }
+            
+            .form-control {
+                padding: 12px 10px;
+            }
+            
+            .btn-signup {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+            
+            .signup-title {
+                font-size: 1.3rem;
+            }
+        }
+        
+        /* Landscape en móviles */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .main-container {
+                flex-direction: row;
+            }
+            
+            .welcome-section, .signup-section {
+                min-height: 100vh;
+                padding: 15px;
+            }
+            
+            .welcome-title {
+                font-size: 1.6rem;
+                margin-bottom: 8px;
+            }
+            
+            .welcome-text {
+                font-size: 0.8rem;
+                margin-bottom: 12px;
+            }
+            
+            .signup-title {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+            
+            .form-control {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+            
+            .btn-signup {
+                padding: 8px;
+                margin-top: 10px;
+            }
+            
+            .form-group {
+                margin-bottom: 12px;
+            }
+            
+            .signup-form {
+                padding: 10px;
+            }
+        }
+        
+        /* Mejoras de accesibilidad */
+        @media (prefers-reduced-motion: reduce) {
+            .btn-signup {
+                transition: none;
+            }
+            
+            .form-control {
+                transition: none;
+            }
+        }
+        
+        /* Soporte para pantallas de alta densidad */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .welcome-section {
+                background-image: linear-gradient(rgba(0, 0, 0, 1.5), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=90);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="welcome-section">
+            <div class="logo">
+                <img src="../assets/img/logo-white.png" alt="Soundwave Logo">
+            </div>
+            <div>
+                <h1 class="welcome-title">¡Únete!</h1>
+                <p class="welcome-text">Crea tu biblioteca musical personal, descubre nuevos artistas y géneros, y forma parte de nuestra comunidad de amantes de la música. ¡El viaje sonoro comienza aquí!</p>
+            </div>
+            <a href="../index.html" class="back-link">
+                <i class="bi bi-house-door me-2"></i> Regresar a menu principal
+            </a>
+        </div>
+        
+        <div class="signup-section">
+            <div class="signup-form">
+                <h2 class="signup-title">Crear cuenta</h2>
+                
+                <form method="post" action="../php/registro.php">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="mb-3 position-relative">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <i class="toggle-password bi bi-eye-slash" onclick="togglePasswordVisibility('password')" style="position: absolute; right: 10px; top: 70%; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>
+                    
+                    <div class="mb-3 position-relative">
+                        <label for="confirm_password" class="form-label">Confirmar contraseña</label>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                        <i class="toggle-password bi bi-eye-slash" onclick="togglePasswordVisibility('confirm_password')" style="position: absolute; right: 10px; top: 70%; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                            <a href="terms.html">Acepto los términos y condiciones</a>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-signup">REGISTRARSE</button>
+                </form>
+                
+                <div class="login-link">
+                    <span>¿Ya tienes cuenta? </span>
+                    <a href="login.html">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleIcon = document.querySelector(inputId === 'password' ? ".toggle-password" : ".toggle-password-confirm");
+            
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.classList.remove("bi-eye-slash");
+                toggleIcon.classList.add("bi-eye");
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.classList.remove("bi-eye");
+                toggleIcon.classList.add("bi-eye-slash");
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
