@@ -122,6 +122,213 @@
             max-height: 50px;
             width: auto;
           }
+           /* Media Queries para Responsive Design */
+        
+        /* Tablets en orientación portrait y dispositivos medianos */
+        @media (max-width: 992px) {
+            .welcome-title {
+                font-size: 3rem;
+            }
+            
+            .welcome-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Tablets pequeñas y móviles grandes en landscape */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .welcome-section {
+                min-height: 40vh;
+                padding: 30px 20px;
+                justify-content: center;
+            }
+            
+            .login-section {
+                min-height: 60vh;
+                padding: 30px 20px;
+            }
+            
+            .welcome-title {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            
+            .welcome-text {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            .back-link {
+                margin-top: 20px;
+                justify-content: center;
+                font-size: 0.9rem;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                padding-top: 10px;
+            }
+            
+            .login-form {
+                max-width: 100%;
+                padding: 10px;
+            }
+            
+            .login-title {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+        }
+        
+        /* Móviles en portrait */
+        @media (max-width: 576px) {
+            .welcome-section {
+                min-height: 35vh;
+                padding: 20px 15px;
+            }
+            
+            .login-section {
+                min-height: 65vh;
+                padding: 20px 15px;
+            }
+            
+            .welcome-title {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            
+            .welcome-text {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            
+            .back-link {
+                font-size: 0.85rem;
+                margin-top: 15px;
+            }
+            
+            .login-title {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+            
+            .form-control {
+                padding: 14px 12px;
+                font-size: 16px; /* Evita zoom en iOS */
+            }
+            
+            .btn-login {
+                padding: 14px;
+                font-size: 1rem;
+                margin-top: 15px;
+            }
+            
+            .logo img {
+                max-height: 40px;
+            }
+            
+            .forgot-link {
+                font-size: 0.85rem;
+            }
+            
+            .register-link {
+                font-size: 0.9rem;
+                margin-top: 25px;
+            }
+        }
+        
+        /* Móviles muy pequeños */
+        @media (max-width: 360px) {
+            .welcome-section {
+                padding: 15px 10px;
+            }
+            
+            .login-section {
+                padding: 15px 10px;
+            }
+            
+            .welcome-title {
+                font-size: 1.8rem;
+            }
+            
+            .welcome-text {
+                font-size: 0.85rem;
+            }
+            
+            .login-form {
+                padding: 5px;
+            }
+            
+            .form-control {
+                padding: 12px 10px;
+            }
+            
+            .btn-login {
+                padding: 12px;
+            }
+        }
+        
+        /* Landscape en móviles */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .main-container {
+                flex-direction: row;
+            }
+            
+            .welcome-section {
+                min-height: 100vh;
+                padding: 20px;
+            }
+            
+            .login-section {
+                min-height: 100vh;
+                padding: 20px;
+            }
+            
+            .welcome-title {
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+            
+            .welcome-text {
+                font-size: 0.85rem;
+                margin-bottom: 15px;
+            }
+            
+            .login-title {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+            
+            .form-control {
+                padding: 8px;
+                margin-bottom: 10px;
+            }
+            
+            .btn-login {
+                padding: 8px;
+                margin-top: 5px;
+            }
+        }
+        
+        /* Mejoras de accesibilidad */
+        @media (prefers-reduced-motion: reduce) {
+            .btn-login {
+                transition: none;
+            }
+        }
+        
+        /* Soporte para pantallas de alta densidad */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .welcome-section {
+                background-image: linear-gradient(rgba(0, 0, 0,1.5),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=90);
+            }
+        }
     </style>
 </head>
 <body>
